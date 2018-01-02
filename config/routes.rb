@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'kitties#index'
+  get '/kitties' => 'kitties#index'
+  get '/kitties/new' => 'kitties#new'
+  get '/kitties/:id' => 'kitties#show'
 end
