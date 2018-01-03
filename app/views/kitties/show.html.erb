@@ -1,2 +1,7 @@
-<h1>Kitties#show</h1>
-<p>Find me in app/views/kitties/show.html.erb</p>
+<h1><%= @kitty.name %></h1>
+<h2>Age: <%= @kitty.age %></h2>
+<h3>Breed: <%= @kitty.breed %></h3>
+
+<%= image_tag(@kitty.image) %>
+
+
