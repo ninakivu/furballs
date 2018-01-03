@@ -4,6 +4,7 @@ class KittiesController < ApplicationController
   end
 
   def show
+    @kitty = Kitty.find(params[:id])
   end
 
   def new
