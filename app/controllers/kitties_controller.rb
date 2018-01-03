@@ -11,7 +11,12 @@ class KittiesController < ApplicationController
     @kitty = Kitty.new
   end
 
-  def create
+  def create  
+    @kitty = Kitty.new(kitty_params)
+    if @kitty.save
+      redirect_to "/kitties/#{@kitty.id}"
+    else
+      redirect_to "/kitties/new"
   end
 
   def edit
@@ -22,4 +27,9 @@ class KittiesController < ApplicationController
 
   def destroy
   end
+  private
+  def kitty_params
+    return params.require(:kitty).permit(:name, :age, :breed, :neutered, :image)
+  end
+
 end
