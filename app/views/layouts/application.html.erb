@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <div id="navigation">
+      <%= link_to("Home", "/") %>
+      <%= link_to("Add Kitty", "/kitties/new") %>
+      
+    </div>
     <%= yield %>
   </body>
 </html>
