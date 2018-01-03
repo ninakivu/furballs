@@ -26,6 +26,12 @@ class KittiesController < ApplicationController
   end
 
   def update
+    @kitty = Kitty.find(params[:id])
+    if @kitty.update(kitty_params)
+      redirect_to "/kitties/#{@kitty.id}"
+    else
+      redirect_to "/kitties/#{@kitty.id}/edit"
+    end
   end
 
   def destroy
