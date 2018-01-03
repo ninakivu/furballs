@@ -1,9 +1,12 @@
-<%= link_to("Go Back", "/kitties") %>
-
 <h1><%= @kitty.name %></h1>
 <h2>Age: <%= @kitty.age %></h2>
 <h3>Breed: <%= @kitty.breed %></h3>
 
 <%= image_tag(@kitty.image) %>
 
+<div>
+  <%= link_to("Go Back", kitties_path) %>
+  <%= link_to("Edit", edit_kitty_path(@kitty)) %>
+  <%= link_to("Delete", kitty_path(@kitty), method: "delete") %>
+</div>
 

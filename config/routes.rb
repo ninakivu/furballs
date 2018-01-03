@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post '/kitties' => 'kitties#create'
 
   # display form to edit kitty info
-  get '/kitties/:id/edit' => 'kitties#edit', as: :kitty_edit
+  get '/kitties/:id/edit' => 'kitties#edit', as: :edit_kitty
 
   # save edited kitty info to database
   patch '/kitties/:id' => 'kitties#update'
