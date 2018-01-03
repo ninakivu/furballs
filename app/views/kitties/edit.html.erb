@@ -1,2 +1,9 @@
-<h1>Kitties#edit</h1>
-<p>Find me in app/views/kitties/edit.html.erb</p>
+<h1>Edit Kitty</h1>
+
+<%= form_for @kitty do |f| %>
+  <%= f.text_field(:name, placeholder: "Name") %>
+  <%= f.number_field(:age, placeholder: "Age") %>
+  <%= f.text_field(:breed, placeholder: "Breed") %>
+  <%= f.text_field(:image, placeholder: "Image URL") %>
+  <%= f.submit %>
+<% end %>
