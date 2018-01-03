@@ -5,5 +5,7 @@
   <%= f.number_field(:age, placeholder: "Age") %>
   <%= f.text_field(:breed, placeholder: "Breed") %>
   <%= f.text_field(:image, placeholder: "Image URL") %>
+  Neutered: <%= f.check_box(:neutered) %>
+  <br>
   <%= f.submit("Add Kitty") %>
 <% end %>
