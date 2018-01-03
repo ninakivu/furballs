@@ -8,6 +8,7 @@ class KittiesController < ApplicationController
   end
 
   def new
+    @kitty = Kitty.new
   end
 
   def create
